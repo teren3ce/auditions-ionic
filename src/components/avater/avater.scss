@@ -1,0 +1,49 @@
+.avater {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.avater.small {
+    width: 25;
+    height: 25;
+}
+.avater.medium {
+    width: 45;
+    height: 45;
+}
+.avater.large {
+    width: 80;
+    height: 80;
+}
+
+.avater img {
+  width: 120%;
+  height: auto;
+}
+
+.avater .status {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  border: 5px solid #fff;
+  border-radius: 10px;
+}
+
+.avater .member {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 15px;
+  background-color: #fff;
+  border: 5px solid #ff0392;
+  border-radius: 10px;
+}
+
+.avater .member span {
+  color: #ff0392;
+}
