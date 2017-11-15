@@ -12,7 +12,6 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { AuditionsPage } from '../pages/auditions/auditions';
 import { MessagesPage } from '../pages/messages/messages';
-import { TalentsPage } from '../pages/talents/talents';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { TalentsPage } from '../pages/talents/talents';
     HomePage,
     AuditionsPage,
     MessagesPage,
-    TalentsPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +36,6 @@ import { TalentsPage } from '../pages/talents/talents';
     HomePage,
     AuditionsPage,
     MessagesPage,
-    TalentsPage
   ],
   providers: [
     StatusBar,
