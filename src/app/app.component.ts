@@ -1,14 +1,16 @@
+import 'clarity-icons';
+import 'clarity-icons/shapes/all-shapes';
+
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
-import { AuditionsPage } from '../pages/auditions/auditions';
-import { MessagesPage } from '../pages/messages/messages';
 import { WelcomePage } from '../pages/welcome/welcome';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -19,18 +21,22 @@ export class MyApp {
   rootPage: any = LoginPage;
 
   pages: Array<{ title: string, component: any }>;
+  helpPages: Array<{ title: string, url: string }>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Welcome', component: WelcomePage },
-      { title: 'Login', component: LoginPage },
-      { title: 'Register', component: RegisterPage },
-      { title: 'Home', component: HomePage },
-      { title: 'Auditions', component: AuditionsPage },
-      { title: 'Messages', component: MessagesPage }
+      { title: 'Home', component: LoginPage },
+      { title: 'Posted Auditions', component: LoginPage },
+      { title: 'Applications', component: RegisterPage },
+      { title: 'Settings', component: WelcomePage },
+    ];
+
+    this.helpPages = [
+      { title: 'Help', url: "http://talent2celeb.com" },
+      { title: 'Feedback', url: "http://talent2celeb.com" },
     ];
 
   }

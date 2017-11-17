@@ -1,19 +1,44 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" class="main-menu">
   <ion-header>
     <ion-toolbar>
       <avater></avater>
       <ion-title>
         <strong>Obi John Doe</strong>
       </ion-title>
+      <div class="menu-info">
+        <ion-label class="email">johndoe@company.com</ion-label>
+        <ion-label class="email">
+          musician
+
+          <clr-icon shape="angle down" size="12"></clr-icon>
+        </ion-label>
+      </div>
+      <div class="user-cats">
+        <ion-badge>Musicians</ion-badge>
+        <ion-badge>Artist</ion-badge>
+        <ion-badge>Actor / Extra</ion-badge>
+        <ion-badge>Photographer</ion-badge>
+      </div>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+    <ion-list class="nav-list">
+      <!-- <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button> -->
+      <button menuClose ion-item *ngFor="let p of pages">
         {{p.title}}
       </button>
     </ion-list>
+    <div class="menu-footer">
+      <ion-label>v1.0</ion-label>
+      <div class="help-list">
+        <button menuClose *ngFor="let p of helpPages">
+          {{p.title}}
+        </button>
+      </div>
+    </div>
   </ion-content>
 
 </ion-menu>
