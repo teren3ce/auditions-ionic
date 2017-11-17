@@ -10,6 +10,7 @@ import { WelcomePage } from '../pages/welcome/welcome';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { ComponentsModule } from '../components/components.module';
+import { WrapperPage } from '../pages/wrapper/wrapper';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ComponentsModule } from '../components/components.module';
     WelcomePage,
     LoginPage,
     RegisterPage,
+    WrapperPage,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { ComponentsModule } from '../components/components.module';
     WelcomePage,
     LoginPage,
     RegisterPage,
+    WrapperPage,
   ],
   providers: [
     StatusBar,

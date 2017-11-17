@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle start>
+      <clr-icon shape="bars" size="18"></clr-icon>
+    </button>
+    <ion-searchbar [type]="'text'" [placeholder]="'Search...'" [showCancelButton]="true" [animated]="true"></ion-searchbar>
+    <button ion-button end color="dark">
+      <clr-icon shape="bell" size="18"></clr-icon>
+    </button>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="currentTab" (ionChange)="segmentChanged($event)">
+      <ion-segment-button *ngFor="let tab of tabs" [value]="tab.index">
+        <ion-label>{{tab.title}}</ion-label>
+        <ion-badge *ngIf="tab.index == 2"></ion-badge>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-slides (ionSlideDidChange)="slideChanged()" #slides>
+    <ion-slide>
+      <h1>Slide {{currentTab}}</h1>
+      <ion-fab bottom right edge>
+        <button ion-fab>
+          <clr-icon shape="plus" size="24"></clr-icon>
+        </button>
+      </ion-fab>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide {{currentTab}}</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Slide {{currentTab}}</h1>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,25 @@
+page-wrapper {
+  .header {
+    background-color: #212121;
+    padding: 10px 0;
+    ion-navbar.toolbar {
+      .toolbar-background {
+        background-color: transparent;
+      }
+      button {
+        color: #fff;
+      }
+      .searchbar {
+        width: 80%;
+        display: inline-flex;
+        display: -webkit-inline-flex;
+        .searchbar-input {
+          height: 30px;
+          border-radius: 15px;
+          line-height: 1rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
