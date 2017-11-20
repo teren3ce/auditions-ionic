@@ -246,6 +246,63 @@ clr-icon .is-off-screen {
 }
 
 
+/* General Styles */
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1,
+h2,
+h3,
+{
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+}
+
+h4,
+h5,
+h6,
+.title {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+}
+
+.label,
+.badge,
+button {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+}
+
+.text-divider {
+  position: relative;
+  width: 60%;
+  margin: 15px auto;
+  text-align: center;
+  span {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .8em;
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 49%;
+    width: 35%;
+    height: 1px;
+    background-color: #fff;
+  }
+  &:before {
+    left: 0;
+  }
+  &:after {
+    right: 0;
+  }
+}
+
+
 /* Side Menu Styles */
 
 .main-menu {
@@ -290,13 +347,16 @@ clr-icon .is-off-screen {
     background-color: #212121;
     .list {
       background-color: transparent;
+      margin-top: 15px;
       .item {
         background-color: transparent;
         padding-left: 30px;
         color: #fff;
-        font-weight: bold;
         .item-inner {
           border-bottom: none;
+          .label {
+            font-weight: 600;
+          }
         }
       }
     }
@@ -321,7 +381,6 @@ clr-icon .is-off-screen {
           color: darken(#fff, 20%);
           background-color: transparent;
           margin-left: 5px;
-
         }
       }
     }

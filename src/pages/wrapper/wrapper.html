@@ -3,36 +3,51 @@
     <button ion-button menuToggle start>
       <clr-icon shape="bars" size="18"></clr-icon>
     </button>
-    <ion-searchbar [type]="'text'" [placeholder]="'Search...'" [showCancelButton]="true" [animated]="true"></ion-searchbar>
-    <button ion-button end color="dark">
-      <clr-icon shape="bell" size="18"></clr-icon>
+    <ion-searchbar [type]="'text'" [placeholder]="'Search...'" [animated]="true"></ion-searchbar>
+    <button ion-button end clear>
+      <clr-icon shape="bell" size="18" class="has-badge"></clr-icon>
     </button>
   </ion-navbar>
   <ion-toolbar>
     <ion-segment [(ngModel)]="currentTab" (ionChange)="segmentChanged($event)">
-      <ion-segment-button *ngFor="let tab of tabs" [value]="tab.index">
+      <ion-segment-button *ngFor="let tab of tabs" [value]="tab.index" [class]="tab.class">
         <ion-label>{{tab.title}}</ion-label>
-        <ion-badge *ngIf="tab.index == 2"></ion-badge>
+        <ion-badge class="indicator"></ion-badge>
+        <ion-badge class="not-indicator" *ngIf="tab.index == 2"></ion-badge>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-slides (ionSlideDidChange)="slideChanged()" #slides>
-    <ion-slide>
-      <h1>Slide {{currentTab}}</h1>
-      <ion-fab bottom right edge>
-        <button ion-fab>
-          <clr-icon shape="plus" size="24"></clr-icon>
-        </button>
-      </ion-fab>
+<ion-content>
+  <ion-slides (ionSlideDidChange)="slideChanged()" #slides class="tab-slides">
+    <ion-slide class="home-page">
+      <div class="slide-cards">
+        <ion-slides #cardslide>
+          <ion-slide>
+            <h2>Slide 1</h2>
+            <button ion-button outline (tap)="openLogin()">go to Login</button>
+          </ion-slide>
+          <ion-slide>
+            <h2>Slide 2</h2>
+          </ion-slide>
+          <ion-slide>
+            <h2>Slide 3</h2>
+          </ion-slide>
+        </ion-slides>
+      </div>
+      <h1>Home Page</h1>
     </ion-slide>
-    <ion-slide>
-      <h1>Slide {{currentTab}}</h1>
+    <ion-slide class="audition-page">
+      <h1>Auditions and Jobs</h1>
     </ion-slide>
-    <ion-slide>
-      <h1>Slide {{currentTab}}</h1>
+    <ion-slide class="message-page">
+      <h1>Messages</h1>
     </ion-slide>
   </ion-slides>
+  <ion-fab bottom right [hidden]="currentTab != 1">
+    <button ion-fab>
+      <clr-icon shape="plus" size="24"></clr-icon>
+    </button>
+  </ion-fab>
 </ion-content>

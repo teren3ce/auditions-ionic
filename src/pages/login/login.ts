@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { WrapperPage } from '../wrapper/wrapper';
+import { RegisterPage } from '../register/register';
 
 @Component({
   selector: 'page-login',
@@ -17,6 +12,22 @@ export class LoginPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  login() {
+    this.navCtrl.setRoot(WrapperPage);
+  }
+
+  goTo(option: string) {
+    switch (option) {
+      case 'register':
+        this.navCtrl.setRoot(RegisterPage);
+        break;
+      case 'forgot':
+        this.navCtrl.setRoot(RegisterPage);
+        break;
+      default:
+        break;
+    }
+  }
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }

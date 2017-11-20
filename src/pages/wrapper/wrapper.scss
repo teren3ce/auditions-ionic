@@ -1,23 +1,107 @@
 page-wrapper {
   .header {
     background-color: #212121;
-    padding: 10px 0;
-    ion-navbar.toolbar {
+    padding: 10px 0 0 0;
+    .toolbar {
       .toolbar-background {
         background-color: transparent;
       }
+      .segment {
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 0 20px;
+        ion-segment-button {
+          color: darken(#fff, 20%);
+          text-transform: uppercase;
+          font-size: .8em;
+          letter-spacing: .8px;
+          >.label {
+            margin: 10px 0 10px 0;
+            font-weight: 300;
+          }
+          &.segment-activated {
+            border-bottom: none;
+            color: #fff;
+            >.label {
+              margin: 10px 0 8px 0;
+              font-weight: 700;
+            }
+            >.indicator {
+              width: 12px;
+              height: 3px;
+              padding: 0;
+              border-radius: 2px;
+              background-color: #fff;
+              margin: 0 auto;
+              &:empty {
+                display: block;
+              }
+            }
+            >.not-indicator {
+              top: 14px;
+            }
+          }
+          &.message {
+            position: relative;
+            >.label {
+              margin-right: 8px;
+            }
+            >.not-indicator {
+              min-width: 0;
+              width: 5px;
+              height: 5px;
+              border-radius: 2px;
+              background-color: #FF0392;
+              position: absolute;
+              top: 16px;
+              right: 0px;
+              padding: 0;
+              &:empty {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+    ion-navbar.toolbar {
       button {
         color: #fff;
+        box-shadow: none;
       }
       .searchbar {
-        width: 80%;
-        display: inline-flex;
-        display: -webkit-inline-flex;
+        width: calc(100% - 60px);
+        display: inline-block;
+        vertical-align: sub;
         .searchbar-input {
           height: 30px;
           border-radius: 15px;
           line-height: 1rem;
           font-size: 1rem;
+          padding: 6px 35px 6px 25px;
+        }
+        .searchbar-search-icon {
+          top: 7px;
+          left: auto;
+          right: 10px;
+          background-image: url('data:image/svg+xml;charset=utf-8, <svg version="1.1" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"><title>search</title><path class="clr-i-outline clr-i-outline-path-1" d="M16.33,5.05A10.95,10.95,0,1,1,5.39,16,11,11,0,0,1,16.33,5.05m0-2.05a13,13,0,1,0,13,13,13,13,0,0,0-13-13Z"></path> <path class="clr-i-outline clr-i-outline-path-2" d="M35,33.29l-7.37-7.42-1.42,1.41,7.37,7.42A1,1,0,1,0,35,33.29Z"></path> </svg>');
+          background-size: 15px;
+          opacity: .45;
+        }
+      }
+    }
+  }
+  .tab-slides {
+    .swiper-slide {
+      justify-content: flex-start;
+      align-items: flex-start;
+      overflow: hidden;
+      overflow-y: auto;
+    }
+    .home-page {
+      .slide-cards {
+        .swiper-slide {
+          width: 280px !important;
         }
       }
     }

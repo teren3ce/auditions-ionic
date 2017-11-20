@@ -1,13 +1,44 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <clr-icon shape="bars" size="14"></clr-icon>
-    </button>
-    <ion-title>Login</ion-title>
-  </ion-navbar>
-</ion-header>
-
-
 <ion-content padding>
-
+  <div>
+    <div class="logo-section">
+      <img src="../../assets/imgs/logo-icon.svg" height="68" />
+      <img class="text-logo" src="../../assets/imgs/logo-2.svg" height="18" />
+    </div>
+    <div class="input-section">
+      <ion-title>Login to continue</ion-title>
+      <ion-list>
+        <ion-item>
+          <ion-input type="text" placeholder="Email Address"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input type="password" placeholder="Password"></ion-input>
+        </ion-item>
+      </ion-list>
+      <button class="login-btn" ion-button block round outline icon-left (tap)="login()">
+        <clr-icon shape="lock" size="18"></clr-icon>
+        Login Now
+      </button>
+      <div class="others">
+        <ion-label class="forgot-lbl">Forgot Password?</ion-label>
+        <ion-label class="reg-lbl">Register Instead</ion-label>
+      </div>
+    </div>
+    <div class="social-section">
+      <div class="text-divider">
+        <span>Or</span>
+      </div>
+      <ion-title>Sign in with</ion-title>
+      <div class="social-login-btns">
+        <button ion-button clear>
+          <img src="../../assets/icon/social/facebook.svg" alt="" height="30">
+        </button>
+        <button ion-button clear>
+          <img src="../../assets/icon/social/twitter.svg" alt="" height="30">
+        </button>
+        <button ion-button clear>
+          <img src="../../assets/icon/social/googleplus.svg" alt="" height="30">
+        </button>
+      </div>
+    </div>
+  </div>
 </ion-content>

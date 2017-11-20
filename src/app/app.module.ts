@@ -11,6 +11,9 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { ComponentsModule } from '../components/components.module';
 import { WrapperPage } from '../pages/wrapper/wrapper';
+import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
+import { RegisterFormPage } from '../pages/register-form/register-form';
+import { RegisterTermsPage } from '../pages/register-terms/register-terms';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { WrapperPage } from '../pages/wrapper/wrapper';
     WelcomePage,
     LoginPage,
     RegisterPage,
+    RegisterFormPage,
+    RegisterTermsPage,
+    ForgotPasswordPage,
     WrapperPage,
   ],
   imports: [
@@ -31,6 +37,9 @@ import { WrapperPage } from '../pages/wrapper/wrapper';
     WelcomePage,
     LoginPage,
     RegisterPage,
+    RegisterFormPage,
+    RegisterTermsPage,
+    ForgotPasswordPage,
     WrapperPage,
   ],
   providers: [
