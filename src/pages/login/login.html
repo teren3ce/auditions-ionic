@@ -19,8 +19,8 @@
         Login Now
       </button>
       <div class="others">
-        <ion-label class="forgot-lbl">Forgot Password?</ion-label>
-        <ion-label class="reg-lbl">Register Instead</ion-label>
+        <ion-label class="forgot-lbl" (tap)="goTo('forgot')">Forgot Password?</ion-label>
+        <ion-label class="reg-lbl" (tap)="goTo('register')">Register Instead</ion-label>
       </div>
     </div>
     <div class="social-section">

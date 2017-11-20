@@ -1,18 +1,110 @@
-<!--
-  Generated template for the RegisterFormPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>register-form</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding>
+  <div class="head-section">
+    <button class="back-btn" ion-button clear icon-left (tap)="goBack()">
+      <clr-icon shape="angle left" size="15"></clr-icon> Back
+    </button>
+    <div class="logo-section">
+      <img src="../../assets/imgs/logo-icon.svg" height="18" />
+      <img class="text-logo" src="../../assets/imgs/logo-3.svg" height="18" />
+    </div>
+  </div>
+  <div class="input-section">
+    <div>
+      <ion-title>Talent or Casting Professional?</ion-title>
+      <div class="sub-cat">
+        <select-card (tap)="isTalent=true">Talent</select-card>
+        <select-card (tap)="isTalent=false">Casting</select-card>
+      </div>
+    </div>
 
+    <div class="talent-section" [hidden]="!isTalent">
+      <div>
+        <ion-title>Please select your talents or skills</ion-title>
+        <div class="sub-cat">
+          <select-card></select-card>
+          <select-card></select-card>
+        </div>
+      </div>
+
+      <div>
+        <ion-title>Personal</ion-title>
+        <ion-list>
+          <ion-item>
+            <ion-input type="text" placeholder="First Name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Last Name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Gender"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Email Address"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="confirm Password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Phone Number"></ion-input>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <div class="casting-section" [hidden]="isTalent">
+      <div>
+        <ion-title>Please select your industries</ion-title>
+        <div class="sub-cat">
+          <select-card></select-card>
+          <select-card></select-card>
+        </div>
+      </div>
+
+      <div>
+        <ion-title>Personal</ion-title>
+        <ion-list>
+          <ion-item>
+            <ion-input type="text" placeholder="First Name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Last Name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Gender"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="email" placeholder="Email Address"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="confirm Password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Phone Number"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Company Name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="text" placeholder="Company Website"></ion-input>
+          </ion-item>
+        </ion-list>
+      </div>
+    </div>
+
+    <div class="terms">
+      <ion-checkbox color="primary" checked="true"></ion-checkbox>
+      <ion-label>i hereby agree to
+        <span (tap)="goTo('terms')">terms and agreement</span>
+      </ion-label>
+    </div>
+    <button class="reg-btn" ion-button block round icon-left (tap)="register()">
+      <clr-icon shape="lock" size="18"></clr-icon> Register
+    </button>
+  </div>
 </ion-content>

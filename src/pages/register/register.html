@@ -1,18 +1,32 @@
-<!--
-  Generated template for the RegisterPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>register</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding>
+  <div>
+    <div class="logo-section">
+      <img src="../../assets/imgs/logo-icon.svg" height="22" />
+      <img class="text-logo" src="../../assets/imgs/logo-3.svg" height="22" />
+    </div>
+    <div class="input-section">
+      <ion-title>Join us. be part of the community</ion-title>
 
+      <button class="fb-btn" ion-button block round icon-left>
+        <img src="../../assets/icon/social/facebook.svg" alt="" height="15" /> Register with facebook
+      </button>
+      <button class="tw-btn" ion-button block round icon-left>
+        <img src="../../assets/icon/social/twitter.svg" alt="" height="15" /> Register with twiiter
+      </button>
+      <button class="gp-btn" ion-button block round icon-left>
+        <img src="../../assets/icon/social/googleplus.svg" alt="" height="15" /> Register with google
+      </button>
+
+      <div class="text-divider dark">
+        <span>Or</span>
+      </div>
+      <button class="mail-btn" ion-button block round icon-left (tap)="goTo('register')">
+        <img src="../../assets/icon/social/facebook.svg" alt="" height="15" /> Register with email
+      </button>
+      <div class="others">
+        <ion-label>Already have an account?</ion-label>
+        <ion-label class="login-lbl" (tap)="goTo('login')">Login Now</ion-label>
+      </div>
+    </div>
+  </div>
 </ion-content>

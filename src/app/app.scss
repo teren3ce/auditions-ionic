@@ -300,6 +300,15 @@ button {
   &:after {
     right: 0;
   }
+  &.dark {
+    span {
+      color: #9B9387;
+    }
+    &:before,
+    &:after {
+      background-color: #9B9387;
+    }
+  }
 }
 
 

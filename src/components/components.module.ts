@@ -5,19 +5,22 @@ import { TimeNotificationComponent } from './time-notification/time-notification
 import { SlideCardComponent } from './slide-card/slide-card';
 import { AuditionCardComponent } from './audition-card/audition-card';
 import { ApplicationCardComponent } from './application-card/application-card';
+import { SelectCardComponent } from './select-card/select-card';
 @NgModule({
 	declarations: [AvaterComponent,
     CheckedAvaterComponent,
     TimeNotificationComponent,
     SlideCardComponent,
     AuditionCardComponent,
-    ApplicationCardComponent],
+    ApplicationCardComponent,
+    SelectCardComponent],
 	imports: [],
 	exports: [AvaterComponent,
     CheckedAvaterComponent,
     TimeNotificationComponent,
     SlideCardComponent,
     AuditionCardComponent,
-    ApplicationCardComponent]
+    ApplicationCardComponent,
+    SelectCardComponent]
 })
 export class ComponentsModule {}

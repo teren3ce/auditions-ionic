@@ -54,6 +54,7 @@ page-login {
       .list {
         .item {
           padding-left: 0;
+          margin: 5px 0;
           &.item-md {
             background-color: transparent;
           }
@@ -100,7 +101,7 @@ page-login {
         justify-content: center;
         align-items: center;
         img {
-            height: 20px;
+          height: 20px;
         }
       }
     }
