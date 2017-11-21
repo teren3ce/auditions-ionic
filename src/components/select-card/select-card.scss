@@ -1,3 +1,78 @@
 select-card {
-
+  ion-card {
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .16);
+    width: 135px;
+    height: 140px;
+    border-radius: 10px;
+    padding: 2em 1.5em 1.5em 1.5em;
+    margin: 0 1em;
+    text-align: center;
+    ion-card-content {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      span {
+        display: inline-block;
+        text-transform: uppercase;
+        color: #FF0392;
+        margin-top: 1.5em;
+        font-size: small;
+      }
+    }
+    &.selected {
+      &::after {
+        content: 'selected';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .6);
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+      }
+    }
+    &.simple {
+      display: inline-block;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+      width: auto;
+      height: 25px;
+      border-radius: 15px;
+      padding: 0 .8em;
+      text-align: center;
+      margin: .3em;
+      ion-card-content {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        span {
+          margin: .5em 0;
+          font-size: .8em;
+          text-transform: capitalize;
+        }
+        clr-icon {
+          display: none;
+        }
+      }
+      &.selected {
+        &:after {
+          display: none;
+        }
+        background-color: #212121;
+        span {
+          color: #fff;
+        }
+        clr-icon {
+          display: inline;
+          color: #fff;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
 }

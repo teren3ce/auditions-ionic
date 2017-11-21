@@ -11,18 +11,16 @@
   <div class="input-section">
     <div>
       <ion-title>Talent or Casting Professional?</ion-title>
-      <div class="sub-cat">
-        <select-card (tap)="isTalent=true">Talent</select-card>
-        <select-card (tap)="isTalent=false">Casting</select-card>
+      <div class="main-cat">
+        <select-card [title]="'Talent'" [image]="'../../assets/icon/talent.svg'" [selected]="isTalent" (tap)="isTalent = true;"></select-card>
+        <select-card [title]="'Casting Pro'" [image]="'../../assets/icon/casting.svg'" [selected]="!isTalent" (tap)="isTalent = false;"></select-card>
       </div>
     </div>
-
     <div class="talent-section" [hidden]="!isTalent">
       <div>
-        <ion-title>Please select your talents or skills</ion-title>
+        <ion-title>Please select your talents or skills </ion-title>
         <div class="sub-cat">
-          <select-card></select-card>
-          <select-card></select-card>
+          <select-card *ngFor="let cat of talentCategory; index as i" [title]="cat" [simple]="true" [selected]="i == 0"></select-card>
         </div>
       </div>
 
@@ -58,8 +56,7 @@
       <div>
         <ion-title>Please select your industries</ion-title>
         <div class="sub-cat">
-          <select-card></select-card>
-          <select-card></select-card>
+          <select-card *ngFor="let cat of castingCategory; index as i" [title]="cat" [simple]="true" [selected]="i == 0"></select-card>
         </div>
       </div>
 

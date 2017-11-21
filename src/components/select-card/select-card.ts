@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'select-card',
@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
 })
 export class SelectCardComponent {
 
-  text: string;
+  @Input() public image: string;
+  @Input() public title: string;
+  @Input() public simple: boolean;
+  @Input() public selected: boolean;
 
   constructor() {
-    this.text = 'Select Card';
   }
 
 }

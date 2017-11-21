@@ -9,8 +9,14 @@ import { RegisterTermsPage } from '../register-terms/register-terms';
 })
 export class RegisterFormPage {
   isTalent: boolean;
+  talentCategory: Array<string>;
+  castingCategory: Array<string>;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.isTalent = true;
+    this.talentCategory = ['Actors', 'Models', 'Dancer', 'Films and Stage Crew', 'Makeup and Stylist', 'Designer/Photographer'];
+
+    this.castingCategory = ['Arts', 'Entertainment', 'Fashion', 'Movie Production', 'Advertising Agency', 'Others']
   }
   goBack() {
     this.navCtrl.pop();

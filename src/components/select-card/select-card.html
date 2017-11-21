@@ -1,4 +1,7 @@
-<!-- Generated template for the SelectCardComponent component -->
-<div>
-  {{text}}
-</div>
+<ion-card [ngClass]="{'simple': simple, 'selected': selected}">
+  <ion-card-content>
+    <img [src]="image" [alt]="title" [hidden]="simple" height="50">
+    <span>{{title}}</span>
+    <clr-icon shape="check" size="12" [hidden]="!simple"></clr-icon>
+  </ion-card-content>
+</ion-card>

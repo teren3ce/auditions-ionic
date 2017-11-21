@@ -9,7 +9,7 @@ export class AvaterComponent {
   @Input() public member: IAvaterMember;
   @Input() public status: IAvaterStatus;
 
-  @Output() open = new EventEmitter<any>();;
+  @Output() open = new EventEmitter<any>();
 
   constructor() {
   }

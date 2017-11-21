@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { ErrorHandler, NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
@@ -28,6 +29,7 @@ import { RegisterTermsPage } from '../pages/register-terms/register-terms';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     ComponentsModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -47,6 +49,6 @@ import { RegisterTermsPage } from '../pages/register-terms/register-terms';
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }
