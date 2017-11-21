@@ -11,7 +11,6 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { WrapperPage } from '../pages/wrapper/wrapper';
-import { RegisterTermsPage } from '../pages/register-terms/register-terms';
 
 
 @Component({
@@ -20,7 +19,7 @@ import { RegisterTermsPage } from '../pages/register-terms/register-terms';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = RegisterTermsPage;
+  rootPage: any = WelcomePage;
 
   pages: Array<{ title: string, component: any }>;
   helpPages: Array<{ title: string, url: string }>;

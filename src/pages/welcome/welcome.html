@@ -1,18 +1,53 @@
-<!--
-  Generated template for the WelcomePage page.
+<ion-content>
+  <div class="head-section">
+    <div class="logo-section">
+      <img src="../../assets/imgs/logo-icon.svg" height="18" />
+      <img class="text-logo" src="../../assets/imgs/logo-3.svg" height="18" />
+    </div>
+    <button ion-button clear small (tap)="skip()">skip</button>
+  </div>
 
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>welcome</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
+  <div class="slide-section">
+    <ion-slides #talentslide [pager]="true">
+      <ion-slide>
+        <div class="welcome-card">
+          <div class="card-image" style="background-image: url(../../assets/imgs/pexels-photo-289225.jpeg);"></div>
+          <div class="card-header">
+            <ion-card-title>Collaborate with other talents</ion-card-title>
+          </div>
+          <div class="card-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel tincidunt nisi. Nullam tristique aliquam
+              sapien.
+            </p>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="welcome-card even">
+          <div class="card-image" style="background-image: url(../../assets/imgs/pexels-photo-207129.jpeg);"></div>
+          <div class="card-header">
+            <ion-card-title>Auditions and Jobs at your fingertips</ion-card-title>
+          </div>
+          <div class="card-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel tincidunt nisi. Nullam tristique aliquam
+              sapien.
+            </p>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="welcome-card">
+          <div class="card-image" style="background-image: url(../../assets/imgs/pexels-photo-415829.jpeg);"></div>
+          <div class="card-header">
+            <ion-card-title>Contests at your fingertips</ion-card-title>
+          </div>
+          <div class="card-content">
+            <p class="lite">Lorem ipsum dolor sit amet.
+            </p>
+            <button ion-button clear (tap)="skip()">continue</button>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
 </ion-content>

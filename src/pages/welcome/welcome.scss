@@ -1,3 +1,87 @@
 page-welcome {
-
+  .head-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0 1.5em 0;
+    padding: 0 1em;
+    .logo-section {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+      img.text-logo {
+        margin-left: 10px;
+      }
+    }
+    button {
+      position: absolute;
+      right: 20px;
+      top: 5px;
+    }
+  }
+  .slide-section {
+    .welcome-card {
+      position: relative;
+      box-shadow: none;
+      overflow: hidden;
+      .card-image {
+        height: 330px;
+        transform: rotate(9deg);
+        position: absolute;
+        top: 35px;
+        left: -100px;
+        right: -100px;
+        bottom: 35px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        z-index: 1;
+      }
+      &.even {
+        .card-image {
+          transform: rotate(351deg);
+        }
+      }
+      .card-header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-position: center;
+        white-space: normal;
+        height: 385px;
+        z-index: 5;
+        .card-title {
+          color: #fff;
+          font-size: 1.2em;
+          text-transform: capitalize;
+          text-shadow: 0 0 10px #000;
+          padding: 8px 1.6em;
+        }
+      }
+      .card-content {
+        p {
+          font-size: .9em;
+          padding: 1em 1.5em 2em 1.5em;
+          &.lite {
+            padding-bottom: 1em;
+          }
+        }
+      }
+    }
+    .swiper-pagination {
+      bottom: 0;
+      button {
+        width: 12px;
+        height: 5px;
+        border-radius: 2.5px;
+        &.swiper-pagination-bullet-active {
+          background: #FF0392;
+          width: 16px;
+        }
+      }
+    }
+  }
 }

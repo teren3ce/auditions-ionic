@@ -2,7 +2,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AvaterComponent } from './avater/avater';
 import { CheckedAvaterComponent } from './checked-avater/checked-avater';
 import { TimeNotificationComponent } from './time-notification/time-notification';
-import { SlideCardComponent } from './slide-card/slide-card';
 import { AuditionCardComponent } from './audition-card/audition-card';
 import { ApplicationCardComponent } from './application-card/application-card';
 import { SelectCardComponent } from './select-card/select-card';
@@ -12,7 +11,6 @@ import { CommonModule } from '@angular/common';
         AvaterComponent,
         CheckedAvaterComponent,
         TimeNotificationComponent,
-        SlideCardComponent,
         AuditionCardComponent,
         ApplicationCardComponent,
         SelectCardComponent
@@ -24,7 +22,6 @@ import { CommonModule } from '@angular/common';
         AvaterComponent,
         CheckedAvaterComponent,
         TimeNotificationComponent,
-        SlideCardComponent,
         AuditionCardComponent,
         ApplicationCardComponent,
         SelectCardComponent
