@@ -1,4 +1,22 @@
-<!-- Generated template for the AuditionCardComponent component -->
-<div>
-  {{text}}
+<div class="audition-card">
+  <avater [type]="'medium'" [image]="image" [member]="{enable: false}" [status]="{enable: false}"></avater>
+  <div class="content">
+    <h2 class="title">{{title}}</h2>
+    <div class="actions">
+      <p>
+        <clr-icon shape="chat-bubble" size="14"></clr-icon>
+        <span>11</span>
+      </p>
+      <p class="status approved">
+        approved
+      </p>
+    </div>
+    <div class="float">
+      <ion-fab right bottom>
+        <button ion-fab color="light">
+          <clr-icon shape="plus" size="12"></clr-icon>
+        </button>
+      </ion-fab>
+    </div>
+  </div>
 </div>

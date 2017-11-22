@@ -100,21 +100,72 @@ page-wrapper {
       overflow: hidden;
       overflow-y: auto;
     }
+    .title-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      margin-top: 1em;
+      h2 {
+        text-transform: uppercase;
+        color: $text;
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+      }
+      button {
+        padding: 0;
+        margin: 0;
+      }
+    }
     .home-page {
       .slide-cards {
         .swiper-slide {
-          width: 280px !important;
+          width: 290px !important;
         }
       }
       .info-card {
-        width: 280px;
-        height: 280px;
+        width: 260px;
+        height: 250px;
+        margin: 10px 20px;
         border-radius: 3px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
         @include background-cover();
         &::after {
           position: absolute;
           @include fill-content();
+        }
+        &>div {
+          text-align: center;
+          h2 {
+            color: $bg;
+            font-size: .85em;
+            padding: 0 1em;
+            span {
+              font-size: 12px;
+              color: $primary;
+              text-transform: uppercase;
+            }
+          }
+          button {
+            &:not(.play) {
+              color: $primary;
+              text-transform: uppercase;
+              background-color: transparent;
+              font-weight: 600;
+            }
+            &.play {
+              margin: 0 auto;
+              @include avater-size-radius(50px);
+              background-color: $light;
+              color: $primary;
+              text-align: center;
+            }
+          }
         }
       }
     }

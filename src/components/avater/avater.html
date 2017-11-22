@@ -1,11 +1,11 @@
-<div class="avater large">
+<div class="avater {{type}}">
   <div class="avater-image">
-    <img src="../assets/imgs/pexels-photo-11392.jpeg" alt="Profile Pic" />
+    <img [src]="image" alt="Profile Pic" />
   </div>
   <div class="avater-info">
-    <span class="status"></span>
-    <div class="member">
-      <span>PRO</span>
+    <span class="status" [hidden]="!status.enable" [ngClass]="{'active': status.enable}"></span>
+    <div class="member" [hidden]="!member.enable">
+      <span>{{member?.text}}</span>
     </div>
   </div>
 </div>

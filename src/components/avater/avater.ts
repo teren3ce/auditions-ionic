@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'avater',
@@ -6,10 +6,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class AvaterComponent {
   @Input() public image: string;
+  @Input() public type: string;
   @Input() public member: IAvaterMember;
   @Input() public status: IAvaterStatus;
-
-  @Output() open = new EventEmitter<any>();
 
   constructor() {
   }
@@ -18,10 +17,10 @@ export class AvaterComponent {
 
 interface IAvaterMember {
   enable: boolean;
-  text: string;
+  text?: string;
 }
 
 interface IAvaterStatus {
   enable: boolean;
-  active: boolean;
+  active?: boolean;
 }

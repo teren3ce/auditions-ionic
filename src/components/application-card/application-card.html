@@ -1,4 +1,16 @@
-<!-- Generated template for the ApplicationCardComponent component -->
-<div>
-  {{text}}
+<div class="application-card">
+  <avater [type]="'medium'" [image]="image" [member]="{enable: false}" [status]="{enable: false}"></avater>
+  <div class="content">
+    <h2 class="title">{{title}}</h2>
+    <span class="user">Talent2celeb studios</span>
+    <div class="actions">
+      <p>
+        <clr-icon shape="chat-bubble" size="14"></clr-icon>
+        <span>11</span>
+      </p>
+      <p class="status approved">
+        approved
+      </p>
+    </div>
+  </div>
 </div>

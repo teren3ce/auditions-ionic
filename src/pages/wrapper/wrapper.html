@@ -20,17 +20,18 @@
 </ion-header>
 
 <ion-content>
-  <ion-slides (ionSlideDidChange)="slideChanged()" #slides class="tab-slides">
+  <ion-slides (ionSlideDidChange)="slideChanged()" #tabslide class="tab-slides">
     <ion-slide class="home-page">
       <div class="slide-cards">
-        <ion-slides #cardslide>
+        <!-- Slides for Info -->
+        <ion-slides #cardslide (ionSlideWillChange)="homeSlideChange($event)">
           <ion-slide>
             <div class="info-card" style="background-image: url('../../assets/imgs/pexels-photo-679513.jpeg')" (tap)="openLogin()">
               <div>
                 <h2>Get Started
                   <span>See How</span>
                 </h2>
-                <button>
+                <button class="play">
                   <clr-icon shape="play" size="16"></clr-icon>
                 </button>
               </div>
@@ -62,7 +63,25 @@
           </ion-slide>
         </ion-slides>
       </div>
-      <h1>Home Page</h1>
+      <div class="title-section">
+        <h2>Recent Applications</h2>
+        <button ion-button clear small>see all</button>
+      </div>
+      <div class="application-cards">
+        <!-- Slide for Applications -->
+        <ion-slides #applyslide>
+          <ion-slide *ngFor="let app of applications">
+            <application-card [title]="app" [image]="'../assets/imgs/pexels-photo-11392.jpeg'"></application-card>
+          </ion-slide>
+        </ion-slides>
+      </div>
+      <div class="title-section">
+        <h2>Recommended for you</h2>
+      </div>
+      <div class="audition-cards">
+        <!-- Slide for Auditions -->
+        <audition-card *ngFor="let app of applications" [title]="app" [image]="'../assets/imgs/pexels-photo-11392.jpeg'"></audition-card>
+      </div>
     </ion-slide>
     <ion-slide class="audition-page">
       <h1>Auditions and Jobs</h1>

@@ -8,10 +8,11 @@ import { LoginPage } from '../login/login';
 })
 export class WrapperPage {
 
-  @ViewChild(Slides) slides: Slides;
-  @ViewChild(Slides) cardslides: Slides;
+  @ViewChild('tabslide') tabslide: Slides;
+  @ViewChild('cardslide') cardslide: Slides;
 
   tabs: Array<{ title: string, class: string, index: number }>;
+  applications: Array<string>;
   currentTab: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -30,21 +31,31 @@ export class WrapperPage {
         index: 2,
       }]
     this.currentTab = 0;
+
+    this.applications = [
+      'Sample title for auditions',
+      'Sample title for auditions 2',
+      'Sample title for auditions 3',
+      'Sample title for auditions 4',
+      'Sample title for auditions 5'
+    ]
   }
 
   slideChanged() {
-    this.currentTab = this.slides.getActiveIndex();
+    this.currentTab = this.tabslide.getActiveIndex();
   }
 
-  segmentChanged(evt) {
-    this.slides.slideTo(this.currentTab);
+  segmentChanged() {
+    this.tabslide.slideTo(this.currentTab);
   }
   openLogin() {
     this.navCtrl.setRoot(LoginPage);
   }
-
+  homeSlideChange(evt: Slides) {
+  }
   ionViewDidLoad() {
   }
   ngAfterViewInit() {
+    this.cardslide.freeMode = true;
   }
 }
