@@ -1,3 +1,4 @@
+@import '../../theme/colors.scss';
 select-card {
   ion-card {
     position: relative;
@@ -15,7 +16,7 @@ select-card {
       span {
         display: inline-block;
         text-transform: uppercase;
-        color: #FF0392;
+        color: $primary;
         margin-top: 1.5em;
         font-size: small;
       }
@@ -29,7 +30,7 @@ select-card {
         right: 0;
         bottom: 0;
         background-color: rgba(0, 0, 0, .6);
-        color: #ffffff;
+        color: $bg;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -63,13 +64,13 @@ select-card {
         &:after {
           display: none;
         }
-        background-color: #212121;
+        background-color: $dark;
         span {
-          color: #fff;
+          color: $bg;
         }
         clr-icon {
           display: inline;
-          color: #fff;
+          color: $bg;
           margin-left: 5px;
         }
       }

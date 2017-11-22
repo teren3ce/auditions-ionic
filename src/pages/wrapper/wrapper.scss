@@ -1,6 +1,8 @@
+@import '../../theme/colors.scss';
+@import '../../theme/mixins.scss';
 page-wrapper {
   .header {
-    background-color: #212121;
+    background-color: $dark;
     padding: 10px 0 0 0;
     .toolbar {
       .toolbar-background {
@@ -11,7 +13,7 @@ page-wrapper {
         align-items: flex-start;
         padding: 0 20px;
         ion-segment-button {
-          color: darken(#fff, 20%);
+          color: darken($bg, 20%);
           text-transform: uppercase;
           font-size: .8em;
           letter-spacing: .8px;
@@ -21,7 +23,7 @@ page-wrapper {
           }
           &.segment-activated {
             border-bottom: none;
-            color: #fff;
+            color: $bg;
             >.label {
               margin: 10px 0 8px 0;
               font-weight: 700;
@@ -31,7 +33,7 @@ page-wrapper {
               height: 3px;
               padding: 0;
               border-radius: 2px;
-              background-color: #fff;
+              background-color: $bg;
               margin: 0 auto;
               &:empty {
                 display: block;
@@ -51,7 +53,7 @@ page-wrapper {
               width: 5px;
               height: 5px;
               border-radius: 2px;
-              background-color: #FF0392;
+              background-color: $primary;
               position: absolute;
               top: 16px;
               right: 0px;
@@ -66,7 +68,7 @@ page-wrapper {
     }
     ion-navbar.toolbar {
       button {
-        color: #fff;
+        color: $bg;
         box-shadow: none;
       }
       .searchbar {
@@ -102,6 +104,17 @@ page-wrapper {
       .slide-cards {
         .swiper-slide {
           width: 280px !important;
+        }
+      }
+      .info-card {
+        width: 280px;
+        height: 280px;
+        border-radius: 3px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        @include background-cover();
+        &::after {
+          position: absolute;
+          @include fill-content();
         }
       }
     }

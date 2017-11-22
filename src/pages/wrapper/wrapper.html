@@ -25,14 +25,40 @@
       <div class="slide-cards">
         <ion-slides #cardslide>
           <ion-slide>
-            <h2>Slide 1</h2>
-            <button ion-button outline (tap)="openLogin()">go to Login</button>
+            <div class="info-card" style="background-image: url('../../assets/imgs/pexels-photo-679513.jpeg')" (tap)="openLogin()">
+              <div>
+                <h2>Get Started
+                  <span>See How</span>
+                </h2>
+                <button>
+                  <clr-icon shape="play" size="16"></clr-icon>
+                </button>
+              </div>
+            </div>
           </ion-slide>
           <ion-slide>
-            <h2>Slide 2</h2>
+            <div class="info-card" style="background-image: url('../../assets/imgs/pexels-photo-60778.jpeg')" (tap)="openLogin()">
+              <div>
+                <h2>Some more Intersting Title</h2>
+                <button>See How</button>
+              </div>
+            </div>
           </ion-slide>
           <ion-slide>
-            <h2>Slide 3</h2>
+            <div class="info-card" style="background-image: url('../../assets/imgs/pexels-photo-681831.jpeg')" (tap)="openLogin()">
+              <div>
+                <h2>Some more Intersting Title Two</h2>
+                <button>See How</button>
+              </div>
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <div class="info-card" style="background-image: url('../../assets/imgs/pexels-photo-681831.jpeg')" (tap)="openLogin()">
+              <div>
+                <h2>Looking for Talents, Post an Audition</h2>
+                <button>Post Now</button>
+              </div>
+            </div>
           </ion-slide>
         </ion-slides>
       </div>

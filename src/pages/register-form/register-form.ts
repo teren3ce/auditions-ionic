@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { WrapperPage } from '../wrapper/wrapper';
 import { RegisterTermsPage } from '../register-terms/register-terms';
+import { WelcomePage } from '../welcome/welcome';
 
 @Component({
   selector: 'page-register-form',
@@ -32,8 +32,8 @@ export class RegisterFormPage {
   }
 
   register() {
-    this.navCtrl.setRoot(WrapperPage, {
-      tab: 0
+    this.navCtrl.setRoot(WelcomePage, {
+      type: 0
     });
   }
 

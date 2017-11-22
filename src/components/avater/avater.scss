@@ -1,20 +1,5 @@
-@mixin avater-size($val) {
-  width: $val;
-  height: $val;
-}
-
-@mixin avater-size-radius($val) {
-  @include avater-size($val);
-  border-radius: $val / 2;
-}
-
-@mixin fill-content() {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
+@import '../../theme/colors.scss';
+@import '../../theme/mixins.scss';
 avater {
   display: -webkit-flex;
   display: flex;
@@ -54,10 +39,10 @@ avater {
         bottom: 0px;
         left: 0px;
         @include avater-size-radius(15px);
-        border: 3px solid #fff;
-        background-color: #9B9387;
+        border: 3px solid $bg;
+        background-color: $text;
         &.active {
-          background-color: #ff0392;
+          background-color: $primary;
         }
       }
       &>.member {
@@ -66,13 +51,13 @@ avater {
         right: 5px;
         width: 18px;
         height: 12px;
-        background-color: #ff0392;
+        background-color: $primary;
         box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
         border-radius: 10px;
         line-height: 9px;
         text-align: center;
         &>span {
-          color: #fff;
+          color: $bg;
           font-size: 7px;
         }
       }

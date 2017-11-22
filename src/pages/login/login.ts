@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { WrapperPage } from '../wrapper/wrapper';
 import { RegisterPage } from '../register/register';
 import { ForgotPasswordPage } from '../forgot-password/forgot-password';
+import { WelcomePage } from '../welcome/welcome';
 
 @Component({
   selector: 'page-login',
@@ -14,7 +14,9 @@ export class LoginPage {
   }
 
   login() {
-    this.navCtrl.setRoot(WrapperPage);
+    this.navCtrl.setRoot(WelcomePage, {
+      type: 0
+    });
   }
 
   goTo(option: string) {

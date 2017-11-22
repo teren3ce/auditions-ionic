@@ -1,3 +1,5 @@
+@import '../../theme/colors.scss';
+@import '../../theme/mixins.scss';
 page-welcome {
   .head-section {
     display: flex;
@@ -32,9 +34,7 @@ page-welcome {
         left: -100px;
         right: -100px;
         bottom: 35px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @include background-cover();
         box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
         z-index: 1;
       }
@@ -47,17 +47,14 @@ page-welcome {
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
-        background-size: cover;
-        background-position: center;
         white-space: normal;
         height: 385px;
         z-index: 5;
         .card-title {
-          color: #fff;
+          color: $bg;
           font-size: 1.2em;
           text-transform: capitalize;
-          text-shadow: 0 0 10px #000;
+          text-shadow: 0 0 10px $dark;
           padding: 8px 1.6em;
         }
       }
@@ -78,7 +75,7 @@ page-welcome {
         height: 5px;
         border-radius: 2.5px;
         &.swiper-pagination-bullet-active {
-          background: #FF0392;
+          background: $primary;
           width: 16px;
         }
       }
