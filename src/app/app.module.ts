@@ -16,6 +16,9 @@ import { ForgotPasswordPage } from '../pages/forgot-password/forgot-password';
 import { RegisterFormPage } from '../pages/register-form/register-form';
 import { RegisterTermsPage } from '../pages/register-terms/register-terms';
 
+import { AccountProvider } from '../providers/account/account';
+import { ConfigProvider } from '../providers/config/config';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -47,7 +50,10 @@ import { RegisterTermsPage } from '../pages/register-terms/register-terms';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: ErrorHandler, useClass: IonicErrorHandler }
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    FooProvider,
+    AccountProvider,
+    ConfigProvider
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

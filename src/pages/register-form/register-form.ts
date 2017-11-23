@@ -17,6 +17,8 @@ export class RegisterFormPage {
     this.talentCategory = ['Actors', 'Models', 'Dancer', 'Films and Stage Crew', 'Makeup and Stylist', 'Designer/Photographer'];
 
     this.castingCategory = ['Arts', 'Entertainment', 'Fashion', 'Movie Production', 'Advertising Agency', 'Others']
+
+    
   }
   goBack() {
     this.navCtrl.pop();

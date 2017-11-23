@@ -8,12 +8,15 @@ import { WrapperPage } from '../wrapper/wrapper';
 })
 export class WelcomePage {
 
+  isTalent: boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.isTalent = this.navParams.get('type');
   }
 
   skip() {
     this.navCtrl.setRoot(WrapperPage, {
-      tab: 0
+      tab: 0,
+      type: this.isTalent
     });
   }
 

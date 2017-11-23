@@ -20,12 +20,25 @@
     "@angular/http": "4.4.4",
     "@angular/platform-browser": "4.4.4",
     "@angular/platform-browser-dynamic": "4.4.4",
+    "@ionic-native/camera": "^4.4.2",
     "@ionic-native/core": "4.3.2",
+    "@ionic-native/crop": "^4.4.2",
+    "@ionic-native/http": "^4.4.2",
+    "@ionic-native/secure-storage": "^4.4.2",
+    "@ionic-native/social-sharing": "^4.4.2",
     "@ionic-native/splash-screen": "4.3.2",
-    "@ionic-native/status-bar": "4.3.2",
+    "@ionic-native/status-bar": "^4.3.2",
+    "@ionic-native/streaming-media": "^4.4.2",
     "@ionic/storage": "2.0.1",
     "@webcomponents/custom-elements": "^1.0.0",
     "clarity-icons": "^0.10.13",
+    "cordova-plugin-advanced-http": "^1.8.1",
+    "cordova-plugin-camera": "^3.0.0",
+    "cordova-plugin-crop": "^0.4.0",
+    "cordova-plugin-secure-storage": "^2.6.8",
+    "cordova-plugin-statusbar": "^2.3.0",
+    "cordova-plugin-streaming-media": "^1.0.2",
+    "cordova-plugin-x-socialsharing": "^5.2.1",
     "ionic-angular": "3.8.0",
     "ionicons": "3.0.0",
     "rxjs": "5.4.3",
@@ -36,5 +49,16 @@
     "@ionic/app-scripts": "3.0.1",
     "typescript": "2.3.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-advanced-http": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-crop": {},
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-statusbar": {},
+      "com.hutchind.cordova.plugins.streamingmedia": {},
+      "cordova-plugin-secure-storage": {}
+    }
+  }
 }

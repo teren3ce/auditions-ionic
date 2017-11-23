@@ -19,7 +19,7 @@ import { WrapperPage } from '../pages/wrapper/wrapper';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = WrapperPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{ title: string, component: any }>;
   helpPages: Array<{ title: string, url: string }>;
