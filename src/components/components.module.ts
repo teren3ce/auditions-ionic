@@ -6,6 +6,7 @@ import { AuditionCardComponent } from './audition-card/audition-card';
 import { ApplicationCardComponent } from './application-card/application-card';
 import { SelectCardComponent } from './select-card/select-card';
 import { CommonModule } from '@angular/common';
+import { ApplicationItemComponent } from './application-item/application-item';
 @NgModule({
     declarations: [
         AvaterComponent,
@@ -13,7 +14,8 @@ import { CommonModule } from '@angular/common';
         TimeNotificationComponent,
         AuditionCardComponent,
         ApplicationCardComponent,
-        SelectCardComponent
+        SelectCardComponent,
+    ApplicationItemComponent
     ],
     imports: [
         CommonModule
@@ -24,7 +26,8 @@ import { CommonModule } from '@angular/common';
         TimeNotificationComponent,
         AuditionCardComponent,
         ApplicationCardComponent,
-        SelectCardComponent
+        SelectCardComponent,
+    ApplicationItemComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

@@ -33,7 +33,7 @@ export class RegisterFormPage {
 
   register() {
     this.navCtrl.setRoot(WelcomePage, {
-      type: 0
+      type: this.isTalent
     });
   }
 

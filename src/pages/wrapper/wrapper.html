@@ -63,25 +63,52 @@
           </ion-slide>
         </ion-slides>
       </div>
-      <div class="title-section">
-        <h2>Recent Applications</h2>
-        <button ion-button clear small>see all</button>
-      </div>
       <div class="application-cards">
-        <!-- Slide for Applications -->
-        <ion-slides #applyslide>
-          <ion-slide *ngFor="let app of applications">
-            <application-card [title]="app" [image]="'../assets/imgs/pexels-photo-11392.jpeg'"></application-card>
-          </ion-slide>
-        </ion-slides>
+        <div class="card-section" *ngIf="isTalent">
+          <div class="title-section">
+            <h2>Recent Applications</h2>
+            <h2 [hidden]="isTalent">My Auditions and Jobs</h2>
+            <button ion-button clear small>see all</button>
+          </div>
+          <!-- Slide for Applications -->
+          <ion-slides #applyslide [autoplay]="2200">
+            <ion-slide *ngFor="let app of applications">
+              <application-card [title]="app" [image]="'../assets/imgs/pexels-photo-11392.jpeg'"></application-card>
+            </ion-slide>
+          </ion-slides>
+        </div>
+
+        <div class="list-section" *ngIf="!isTalent">
+          <div class="title-section">
+            <h2>My Auditions and Jobs</h2>
+          </div>
+          <ion-list>
+            <div ion-item *ngFor="let app of applications">
+              <application-item [title]="app" [image]="'../../assets/imgs/pexels-photo-356147.jpeg'"></application-item>
+            </div>
+          </ion-list>
+
+          <div class="load-cont">
+            <button class="loadmore-btn" ion-button block round outline>
+              Load More
+            </button>
+          </div>
+        </div>
       </div>
-      <div class="title-section">
-        <h2>Recommended for you</h2>
-      </div>
-      <div class="audition-cards">
+      <div class="audition-cards" [hidden]="!isTalent">
+        <div class="title-section">
+          <h2>Recommended for you</h2>
+        </div>
         <!-- Slide for Auditions -->
         <audition-card *ngFor="let app of applications" [title]="app" [image]="'../assets/imgs/pexels-photo-11392.jpeg'"></audition-card>
+
+        <div class="load-cont">
+          <button class="loadmore-btn" ion-button block round outline>
+            Load More
+          </button>
+        </div>
       </div>
+
     </ion-slide>
     <ion-slide class="audition-page">
       <h1>Auditions and Jobs</h1>

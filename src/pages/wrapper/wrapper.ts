@@ -14,6 +14,7 @@ export class WrapperPage {
   tabs: Array<{ title: string, class: string, index: number }>;
   applications: Array<string>;
   currentTab: number;
+  isTalent: boolean;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.tabs = [
@@ -39,6 +40,9 @@ export class WrapperPage {
       'Sample title for auditions 4',
       'Sample title for auditions 5'
     ]
+
+    this.isTalent = this.navParams.get('type');
+    console.log(this.isTalent);
   }
 
   slideChanged() {
