@@ -1,5 +1,5 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { } from '@angular/core/src/event_emitter';
+import { Component } from '@angular/core';
+import { NavParams, ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'popover-menu',
@@ -7,15 +7,25 @@ import { } from '@angular/core/src/event_emitter';
 })
 export class PopoverMenuComponent {
 
-  @Input() public menulist: IMenu;
+  menulist: IMenu;
+  selected: string;
 
-  @Output() selected: EventEmitter<string>;
 
-  constructor() {
+  constructor(private navParams: NavParams, public viewCtrl: ViewController) {
+    console.log(this.navParams.data);
+    this.menulist = this.navParams.data.list;
+    this.selected = this.navParams.data.selected;
   }
 
   _selected(item) {
-    this.selected.emit(item);
+    this.selected = item.text;
+    this.viewCtrl.dismiss({
+      selected: this.selected,
+      icon: item.icon
+    });
+  }
+
+  ngOnInit() {
   }
 
 }

@@ -1,3 +1,31 @@
+@import '../../theme/colors.scss';
+@import '../../theme/mixins.scss';
 time-notification {
-
+  .time-piece {
+    width: 70px;
+    height: 30px;
+    padding: 2px 0;
+    overflow: hidden;
+    position: relative;
+    span {
+      color: $text;
+      font-size: 13px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      @include avater-size-radius(20px);
+      background-color: $text;
+      top: 5px;
+      right: -10px;
+    }
+    &.active {
+      span {
+        color: $primary;
+      }
+      &:after {
+        background-color: $primary;
+      }
+    }
+  }
 }

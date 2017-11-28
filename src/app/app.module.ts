@@ -17,6 +17,7 @@ import { RegisterFormPage } from '../pages/register-form/register-form';
 import { RegisterTermsPage } from '../pages/register-terms/register-terms';
 import { AccountProvider } from '../providers/account/account';
 import { ConfigProvider } from '../providers/config/config';
+import { ConversationPage } from '../pages/conversation/conversation';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ConfigProvider } from '../providers/config/config';
     RegisterTermsPage,
     ForgotPasswordPage,
     WrapperPage,
+    ConversationPage
   ],
   imports: [
     BrowserModule,
@@ -45,6 +47,7 @@ import { ConfigProvider } from '../providers/config/config';
     RegisterTermsPage,
     ForgotPasswordPage,
     WrapperPage,
+    ConversationPage
   ],
   providers: [
     StatusBar,

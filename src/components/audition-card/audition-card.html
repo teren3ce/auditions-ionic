@@ -1,4 +1,4 @@
-<div class="audition-card" *ngIf="full">
+<div class="audition-card" *ngIf="!full">
   <avater [type]="'medium'" [image]="image" [member]="{enable: false}" [status]="{enable: false}"></avater>
   <div class="content">
     <h2 class="title">{{title}}</h2>
@@ -18,7 +18,7 @@
   </button>
 </div>
 
-<div class="audition-card" *ngIf="!full" [ngClass]="{'full': !full}">
+<div class="audition-card" *ngIf="full" [ngClass]="{'full': full}">
   <div class="audition-header">
     <div>
       <avater [type]="'small'" [image]="image" [member]="{enable: false}" [status]="{enable: false}"></avater>

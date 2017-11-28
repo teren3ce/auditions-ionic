@@ -16,8 +16,8 @@ import { PopoverMenuComponent } from './popover-menu/popover-menu';
         AuditionCardComponent,
         ApplicationCardComponent,
         SelectCardComponent,
-    ApplicationItemComponent,
-    PopoverMenuComponent
+        ApplicationItemComponent,
+        PopoverMenuComponent
     ],
     imports: [
         CommonModule
@@ -29,8 +29,11 @@ import { PopoverMenuComponent } from './popover-menu/popover-menu';
         AuditionCardComponent,
         ApplicationCardComponent,
         SelectCardComponent,
-    ApplicationItemComponent,
-    PopoverMenuComponent
+        ApplicationItemComponent,
+        PopoverMenuComponent
+    ],
+    entryComponents: [
+        PopoverMenuComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

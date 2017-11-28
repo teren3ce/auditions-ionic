@@ -93,16 +93,19 @@ page-wrapper {
       }
     }
   }
+  .addbtn {
+    right: 20px;
+    bottom: 20px;
+    button {
+      @include gradient-btn();
+    }
+  }
   .tab-slides {
     .swiper-slide {
       justify-content: flex-start;
       align-items: flex-start;
       overflow: hidden;
       overflow-y: auto;
-    }
-    .addbtn {
-      right: 20px;
-      bottom: 20px;
     }
     .title-section {
       display: flex;
@@ -152,8 +155,13 @@ page-wrapper {
       align-items: center;
       button {
         color: $text;
+        img {
+          height: 25px;
+          margin-right: 5px;
+        }
         clr-icon {
           margin-right: 5px;
+          margin-left: 3px;
         }
         .badge {
           border-radius: 15px;
@@ -224,6 +232,47 @@ page-wrapper {
     }
     .audition-page {
       padding: .8em 1em;
+    }
+    .message-page {
+      padding: .8em 1em;
+      avater {
+        padding: 0 10px;
+      }
+      .list {
+        .list-header {
+          border-top: none;
+          border-bottom: 1px solid #dedede;
+          margin-bottom: 0;
+          .item-inner {
+            border-top: none;
+            .label {
+              text-align: left;
+              text-transform: uppercase;
+              color: $text;
+            }
+          }
+        }
+        .item {
+          padding: 0;
+          .item-inner {
+            padding: 0;
+            .label {
+              margin: 20px 0 20px 0;
+            }
+          }
+        }
+      }
+      .message-item {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        .message-info {
+          width: calc(100% - 70px);
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
     }
   }
 }

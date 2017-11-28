@@ -1,4 +1,3 @@
-<!-- Generated template for the TimeNotificationComponent component -->
-<div>
-  {{text}}
+<div class="time-piece" [ngClass]="{'active': active}">
+  <span>{{time | date:'shortTime'}}</span>
 </div>

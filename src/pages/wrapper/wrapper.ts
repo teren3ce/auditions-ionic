@@ -1,6 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, NavParams, Slides } from 'ionic-angular';
+import { NavController, NavParams, Slides, PopoverController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { PopoverMenuComponent } from '../../components/popover-menu/popover-menu';
+import { NewAuditionPage } from '../new-audition/new-audition';
+import { ConversationPage } from '../conversation/conversation';
 
 @Component({
   selector: 'page-wrapper',
@@ -11,13 +14,24 @@ export class WrapperPage {
   @ViewChild('tabslide') tabslide: Slides;
   @ViewChild('cardslide') cardslide: Slides;
 
+
   tabs: Array<{ title: string, class: string, index: number }>;
-  applications: Array<string>;
   currentTab: number;
   isTalent: boolean;
   audSorting: string;
+  messageMenuList: Array<{ text: string, icon: string }>;
+  selectMessageMenu: string = 'Recent';
+  selectMessageMenuIcon: string = 'chat-bubble';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  showAddBtn: boolean;
+  addBtnPage: any = NewAuditionPage;
+
+  //loaded data
+  applications: Array<string>;
+  messages: Array<string>;
+  msgDate: Date;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController) {
     this.tabs = [
       {
         title: "Home",
@@ -32,7 +46,7 @@ export class WrapperPage {
         class: 'message',
         index: 2,
       }]
-    this.currentTab = 1;
+    this.currentTab = 2;
 
     this.applications = [
       'Sample title for auditions',
@@ -42,7 +56,36 @@ export class WrapperPage {
       'Sample title for auditions 5'
     ]
 
+    this.messages = [
+      'Mattew Omeike',
+      'Joy Chukwu',
+      'Nixon Dev',
+      'Becky HR',
+      'Karen Sings '
+    ]
+    this.msgDate = new Date();
+
+    this.messageMenuList = [
+      {
+        text: "Recent",
+        icon: "chat-bubble"
+      },
+      {
+        text: "Favourites",
+        icon: "favorite"
+      },
+      {
+        text: "Groups",
+        icon: "users"
+      },
+      {
+        text: "Applications",
+        icon: "library"
+      }
+    ]
+
     this.isTalent = this.navParams.get('type');
+    this.isTalent = true;
   }
 
   slideChanged() {
@@ -56,6 +99,27 @@ export class WrapperPage {
     this.navCtrl.setRoot(LoginPage);
   }
   homeSlideChange(evt: Slides) {
+  }
+
+  openMessageMenu(evt) {
+    let popover = this.popoverCtrl.create(PopoverMenuComponent,
+      {
+        list: this.messageMenuList,
+        selected: this.selectMessageMenu
+      });
+    popover.present({
+      ev: evt,
+    });
+    popover.onDidDismiss((data) => {
+      this.selectMessageMenu = data.selected;
+      this.selectMessageMenuIcon = data.icon;
+    })
+  }
+
+  openConversaion(item) {
+    this.navCtrl.push(ConversationPage, {
+      message: item
+    });
   }
 
   ngAfterViewInit() {
