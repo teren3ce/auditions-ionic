@@ -10,6 +10,10 @@ export class ConversationPage {
   title: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.title = this.navParams.data.message;
+  }
+  goBack() {
+    this.navCtrl.pop();
   }
 
   ionViewDidLoad() {

@@ -1,17 +1,15 @@
 <div class="title-header">
   <div class="title-nav-bar">
     <div>
-      <ion-buttons>
-        <button ion-button icon-only>
-          <clr-icon shape="arrow left" size="16"></clr-icon>
-        </button>
-      </ion-buttons>
-      <avater [type]="'small'" [image]="'../../assets/imgs/pexels-photo-11392.jpeg'" [member]="{enable: false}" [status]="{enable: false }"></avater>
-      <ion-title>{{title}}</ion-title>
+      <button ion-button clear icon-only (tap)="goBack()">
+        <clr-icon shape="arrow left" size="22"></clr-icon>
+      </button>
+      <avater [type]="'small'" [image]="'../../assets/imgs/pexels-photo-415829.jpeg'" [member]="{enable: false}" [status]="{enable: false }"></avater>
+      <ion-title>{{title}}Mattew Omeike</ion-title>
     </div>
     <ion-buttons>
-      <button ion-button icon-only>
-        <clr-icon shape="ellipsis-vertical" size="16"></clr-icon>
+      <button ion-button clear icon-only>
+        <clr-icon shape="ellipsis-vertical" size="18"></clr-icon>
       </button>
     </ion-buttons>
   </div>

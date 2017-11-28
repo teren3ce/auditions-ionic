@@ -1,18 +1,22 @@
-<!--
-  Generated template for the PostedAuditionsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>posted-auditions</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-
-</ion-content>
+<div class="title-header">
+    <div class="title-nav-bar">
+      <div>
+        <button ion-button clear icon-only (tap)="goBack()">
+          <clr-icon shape="arrow left" size="22"></clr-icon>
+        </button>
+        <avater [type]="'small'" [image]="'../../assets/imgs/pexels-photo-415829.jpeg'" [member]="{enable: false}" [status]="{enable: false }"></avater>
+        <ion-title>Page Title</ion-title>
+      </div>
+      <ion-buttons>
+        <button ion-button clear icon-only>
+          <clr-icon shape="ellipsis-vertical" size="18"></clr-icon>
+        </button>
+      </ion-buttons>
+    </div>
+  </div>
+  
+  
+  <ion-content padding>
+  
+  </ion-content>
+  

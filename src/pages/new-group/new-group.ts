@@ -10,8 +10,12 @@ export class NewGroupPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  goBack() {
+    this.navCtrl.pop();
+  }
+
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NewGroupPage');
+    
   }
 
 }

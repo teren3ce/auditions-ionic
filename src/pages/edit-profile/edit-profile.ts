@@ -10,8 +10,11 @@ export class EditProfilePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
+  goBack() {
+    this.navCtrl.pop();
+  }
+
   ionViewDidLoad() {
-    console.log('ionViewDidLoad EditProfilePage');
   }
 
 }
