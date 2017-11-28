@@ -7,6 +7,7 @@ import { ApplicationCardComponent } from './application-card/application-card';
 import { SelectCardComponent } from './select-card/select-card';
 import { CommonModule } from '@angular/common';
 import { ApplicationItemComponent } from './application-item/application-item';
+import { PopoverMenuComponent } from './popover-menu/popover-menu';
 @NgModule({
     declarations: [
         AvaterComponent,
@@ -15,7 +16,8 @@ import { ApplicationItemComponent } from './application-item/application-item';
         AuditionCardComponent,
         ApplicationCardComponent,
         SelectCardComponent,
-    ApplicationItemComponent
+    ApplicationItemComponent,
+    PopoverMenuComponent
     ],
     imports: [
         CommonModule
@@ -27,7 +29,8 @@ import { ApplicationItemComponent } from './application-item/application-item';
         AuditionCardComponent,
         ApplicationCardComponent,
         SelectCardComponent,
-    ApplicationItemComponent
+    ApplicationItemComponent,
+    PopoverMenuComponent
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

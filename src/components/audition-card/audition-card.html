@@ -1,4 +1,4 @@
-<div class="audition-card">
+<div class="audition-card" *ngIf="full">
   <avater [type]="'medium'" [image]="image" [member]="{enable: false}" [status]="{enable: false}"></avater>
   <div class="content">
     <h2 class="title">{{title}}</h2>
@@ -16,4 +16,47 @@
   <button ion-fab color="light" class="float-btn">
     <clr-icon shape="check" size="16"></clr-icon>
   </button>
+</div>
+
+<div class="audition-card" *ngIf="!full" [ngClass]="{'full': !full}">
+  <div class="audition-header">
+    <div>
+      <avater [type]="'small'" [image]="image" [member]="{enable: false}" [status]="{enable: false}"></avater>
+      <div class="user">
+        <h2>T2C Studios</h2>
+        <h4>Casting Pro</h4>
+      </div>
+    </div>
+    <div>
+      <p class="verified">
+        <clr-icon shape="check-circle" size="18"></clr-icon>
+        <span>verified</span>
+      </p>
+    </div>
+  </div>
+  <div class="audition-image" style="background-image: url('../../assets//imgs/pexels-photo-674269.jpeg')">
+    <div class="info">
+      <h2>{{title}}</h2>
+      <clr-icon shape="favorite" size="16"></clr-icon>
+    </div>
+  </div>
+  <div class="audition-content">
+    <div class="content-info">
+      <div>
+        <span class="location">Lagos</span>
+        <span class="category">Actor / Extra</span>
+      </div>
+      <div>
+        <p>
+          <clr-icon shape="chat-bubble" size="14"></clr-icon>
+          <span>10</span>
+        </p>
+      </div>
+    </div>
+    <p>A theme is the set of colors that will be applied to the Angular Material components. The library's approach to theming
+      is based on the guidance from the Ma...</p>
+    <button class="applied">
+      Apply Now
+    </button>
+  </div>
 </div>

@@ -20,7 +20,8 @@
 </ion-header>
 
 <ion-content>
-  <ion-slides (ionSlideDidChange)="slideChanged()" #tabslide class="tab-slides">
+  <ion-slides (ionSlideDidChange)="slideChanged()" [initialSlide]="currentTab" #tabslide class="tab-slides">
+    <!-- HOME TAB STRUCTURE -->
     <ion-slide class="home-page">
       <div class="slide-cards">
         <!-- Slides for Info -->
@@ -100,7 +101,7 @@
           <h2>Recommended for you</h2>
         </div>
         <!-- Slide for Auditions -->
-        <audition-card *ngFor="let app of applications" [title]="app" [image]="'../assets/imgs/pexels-photo-11392.jpeg'"></audition-card>
+        <audition-card *ngFor="let app of applications" [full]="false" [title]="app" [image]="'../assets/imgs/pexels-photo-11392.jpeg'"></audition-card>
 
         <div class="load-cont">
           <button class="loadmore-btn" ion-button block round outline>
@@ -110,14 +111,38 @@
       </div>
 
     </ion-slide>
+
+    <!-- AUDITIONS TAB STRUCTURE -->
     <ion-slide class="audition-page">
-      <h1>Auditions and Jobs</h1>
+      <div class="option-header">
+        <button ion-button icon-left clear>
+          <clr-icon shape="slider right" size="14"></clr-icon>
+          <span>Filter</span>
+          <ion-badge item-end>20k</ion-badge>
+        </button>
+
+        <button ion-button icon-left icon-right clear>
+          <clr-icon shape="two-way-arrows right" size="14"></clr-icon>
+          <span>Sort By</span>
+          <clr-icon shape="angle down" size="10"></clr-icon>
+          <ion-select [(ngModel)]="audSorting" interface="action-sheet">
+            <ion-option>Publish Date</ion-option>
+            <ion-option>End Date</ion-option>
+            <ion-option>Applicants</ion-option>
+            <ion-option>Name or Title</ion-option>
+          </ion-select>
+        </button>
+      </div>
+
+      <audition-card *ngFor="let app of applications" full="true" [title]="app" [image]="'../assets/imgs/pexels-photo-11392.jpeg'"></audition-card>
     </ion-slide>
+
+    <!-- MESSAGE TAB STRUCTURE -->
     <ion-slide class="message-page">
       <h1>Messages</h1>
     </ion-slide>
   </ion-slides>
-  <ion-fab bottom right [hidden]="currentTab != 1">
+  <ion-fab bottom right [hidden]="currentTab != 1" class="addbtn">
     <button ion-fab>
       <clr-icon shape="plus" size="24"></clr-icon>
     </button>

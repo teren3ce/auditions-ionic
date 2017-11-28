@@ -15,6 +15,7 @@ export class WrapperPage {
   applications: Array<string>;
   currentTab: number;
   isTalent: boolean;
+  audSorting: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.tabs = [
@@ -31,7 +32,7 @@ export class WrapperPage {
         class: 'message',
         index: 2,
       }]
-    this.currentTab = 0;
+    this.currentTab = 1;
 
     this.applications = [
       'Sample title for auditions',
@@ -42,7 +43,6 @@ export class WrapperPage {
     ]
 
     this.isTalent = this.navParams.get('type');
-    console.log(this.isTalent);
   }
 
   slideChanged() {
@@ -57,8 +57,7 @@ export class WrapperPage {
   }
   homeSlideChange(evt: Slides) {
   }
-  ionViewDidLoad() {
-  }
+
   ngAfterViewInit() {
     this.cardslide.freeMode = true;
   }

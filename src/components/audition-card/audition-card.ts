@@ -11,6 +11,7 @@ export class AuditionCardComponent {
   @Input() public sex: string;
   @Input() public age: string;
   @Input() public image: string;
+  @Input() public full: boolean;
 
   constructor() {
 

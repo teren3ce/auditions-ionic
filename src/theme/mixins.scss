@@ -54,6 +54,17 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ed1763', endColorstr='#c90094', GradientType=0);
 }
 
+@mixin gradient-text() {
+  background: rgba(0, 0, 0, 0.57);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.57)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.57) 0%, rgba(0, 0, 0, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0);
+}
+
 @mixin text-truncate() {
   width: 100%;
   white-space: nowrap;

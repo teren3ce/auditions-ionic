@@ -1,0 +1,6 @@
+<ion-list>
+  <ion-item *ngFor="let menu of menulist" (tap)="_selected(menu.text)">
+    <clr-icon *ngIf="menu?.icon" [shape]="menu.icon"></clr-icon>
+    {{menu.text}}
+  </ion-item>
+</ion-list>

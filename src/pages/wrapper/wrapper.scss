@@ -100,6 +100,10 @@ page-wrapper {
       overflow: hidden;
       overflow-y: auto;
     }
+    .addbtn {
+      right: 20px;
+      bottom: 20px;
+    }
     .title-section {
       display: flex;
       justify-content: space-between;
@@ -136,6 +140,31 @@ page-wrapper {
         }
         &:last-child .item-inner {
           border-bottom: 1px solid #dedede;
+        }
+      }
+    }
+    .option-header {
+      background: $bg;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+      border-radius: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      button {
+        color: $text;
+        clr-icon {
+          margin-right: 5px;
+        }
+        .badge {
+          border-radius: 15px;
+          margin-left: 10px;
+        }
+        .select {
+          padding: 0;
+          .select-text,
+          .select-icon {
+            display: none;
+          }
         }
       }
     }
@@ -192,6 +221,9 @@ page-wrapper {
       .audition-cards {
         margin: 2em 1em;
       }
+    }
+    .audition-page {
+      padding: .8em 1em;
     }
   }
 }
