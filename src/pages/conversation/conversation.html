@@ -17,5 +17,12 @@
 
 
 <ion-content padding>
+  <message-list *ngFor="let msgs of messages" [messages]="msgs.list" [option]="msgs.option"></message-list>
 
+  <div class="message-box">
+    <ion-input type="text" value="" placeholder="send a messages..."></ion-input>
+    <button ion-button clear>
+      <clr-icon shape="arrow right" size="20"></clr-icon>
+    </button>
+  </div>
 </ion-content>

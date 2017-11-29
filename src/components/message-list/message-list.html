@@ -1,0 +1,7 @@
+<div class="message-list {{option}} nouser">
+  <div class="message-item" *ngFor="let msg of messages">
+    <p class="user">{{msg.from}}</p>
+    <p class="text">{{msg.text}}</p>
+    <p class="time">{{msg.time | date:'shortTime'}}</p>
+  </div>
+</div>

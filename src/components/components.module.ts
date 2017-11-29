@@ -8,6 +8,7 @@ import { SelectCardComponent } from './select-card/select-card';
 import { CommonModule } from '@angular/common';
 import { ApplicationItemComponent } from './application-item/application-item';
 import { PopoverMenuComponent } from './popover-menu/popover-menu';
+import { MessageListComponent } from './message-list/message-list';
 @NgModule({
     declarations: [
         AvaterComponent,
@@ -17,7 +18,8 @@ import { PopoverMenuComponent } from './popover-menu/popover-menu';
         ApplicationCardComponent,
         SelectCardComponent,
         ApplicationItemComponent,
-        PopoverMenuComponent
+        PopoverMenuComponent,
+    MessageListComponent
     ],
     imports: [
         CommonModule
@@ -30,7 +32,8 @@ import { PopoverMenuComponent } from './popover-menu/popover-menu';
         ApplicationCardComponent,
         SelectCardComponent,
         ApplicationItemComponent,
-        PopoverMenuComponent
+        PopoverMenuComponent,
+    MessageListComponent
     ],
     entryComponents: [
         PopoverMenuComponent
