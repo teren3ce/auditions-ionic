@@ -12,7 +12,6 @@ export class PopoverMenuComponent {
 
 
   constructor(private navParams: NavParams, public viewCtrl: ViewController) {
-    console.log(this.navParams.data);
     this.menulist = this.navParams.data.list;
     this.selected = this.navParams.data.selected;
   }

@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { ApplicationItemComponent } from './application-item/application-item';
 import { PopoverMenuComponent } from './popover-menu/popover-menu';
 import { MessageListComponent } from './message-list/message-list';
+import { PopoverFilterComponent } from './popover-filter/popover-filter';
 @NgModule({
     declarations: [
         AvaterComponent,
@@ -19,7 +20,8 @@ import { MessageListComponent } from './message-list/message-list';
         SelectCardComponent,
         ApplicationItemComponent,
         PopoverMenuComponent,
-    MessageListComponent
+    MessageListComponent,
+    PopoverFilterComponent
     ],
     imports: [
         CommonModule
@@ -33,7 +35,8 @@ import { MessageListComponent } from './message-list/message-list';
         SelectCardComponent,
         ApplicationItemComponent,
         PopoverMenuComponent,
-    MessageListComponent
+    MessageListComponent,
+    PopoverFilterComponent
     ],
     entryComponents: [
         PopoverMenuComponent
