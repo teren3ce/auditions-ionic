@@ -9,7 +9,6 @@
         <ion-label class="email">johndoe@company.com</ion-label>
         <ion-label class="email">
           musician
-
           <clr-icon shape="angle down" size="12"></clr-icon>
         </ion-label>
       </div>
@@ -31,7 +30,7 @@
     <div class="menu-footer">
       <ion-label>v1.0</ion-label>
       <div class="help-list">
-        <button menuClose *ngFor="let p of helpPages">
+        <button menuClose *ngFor="let p of helpPages" (tap)="openUrl(p)">
           {{p.title}}
         </button>
       </div>

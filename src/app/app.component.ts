@@ -7,11 +7,10 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { LoginPage } from '../pages/login/login';
-import { RegisterPage } from '../pages/register/register';
-import { WelcomePage } from '../pages/welcome/welcome';
 import { WrapperPage } from '../pages/wrapper/wrapper';
-import { ConversationGroupPage } from '../pages/conversation-group/conversation-group';
+import { PostedAuditionsPage } from '../pages/posted-auditions/posted-auditions';
+import { ApplicationsPage } from '../pages/applications/applications';
+import { SettingsPage } from '../pages/settings/settings';
 
 
 @Component({
@@ -20,7 +19,7 @@ import { ConversationGroupPage } from '../pages/conversation-group/conversation-
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ConversationGroupPage;
+  rootPage: any = WrapperPage;
 
   pages: Array<{ title: string, component: any }>;
   helpPages: Array<{ title: string, url: string }>;
@@ -31,9 +30,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: WrapperPage },
-      { title: 'Posted Auditions', component: LoginPage },
-      { title: 'Applications', component: RegisterPage },
-      { title: 'Settings', component: WelcomePage },
+      { title: 'Posted Auditions', component: PostedAuditionsPage },
+      { title: 'Applications', component: ApplicationsPage },
+      { title: 'Settings', component: SettingsPage },
     ];
 
     this.helpPages = [
@@ -56,5 +55,11 @@ export class MyApp {
     // Reset the content nav to have just this page
     // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
+  }
+
+  openUrl(page) {
+    // Reset the content nav to have just this page
+    // we wouldn't want the back button to show in this scenario
+    //this.nav.setRoot(page.url);
   }
 }

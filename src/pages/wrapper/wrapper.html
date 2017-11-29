@@ -25,7 +25,7 @@
     <ion-slide class="home-page">
       <div class="slide-cards">
         <!-- Slides for Info -->
-        <ion-slides #cardslide (ionSlideWillChange)="homeSlideChange($event)">
+        <ion-slides #cardslide>
           <ion-slide>
             <div class="info-card" style="background-image: url('../../assets/imgs/pexels-photo-679513.jpeg')" (tap)="openLogin()">
               <div>
@@ -160,7 +160,7 @@
         </button>
       </div>
 
-      <ion-list>
+      <ion-list [hidden]="selectMessageMenu != 'Recent'">
         <ion-list-header>
           Today
         </ion-list-header>
@@ -178,10 +178,31 @@
           </div>
         </ion-item>
       </ion-list>
+
+      <ion-list [hidden]="selectMessageMenu != 'Groups'">
+        <ion-list-header>
+          Today
+        </ion-list-header>
+        <ion-item *ngFor="let message of messages" (tap)="openConversaion(message)">
+          <div class="message-item">
+            <div class="icon-round large">
+              <clr-icon shape="users" size="22"></clr-icon>
+            </div>
+
+            <div class="message-info">
+              <div>
+                <h2>{{message}}</h2>
+                <p>Hello peeps, message done soon</p>
+              </div>
+              <time-notification [time]="msgDate" [active]="true"></time-notification>
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
     </ion-slide>
   </ion-slides>
-  <ion-fab bottom right [hidden]="currentTab != 1" class="addbtn">
-    <button ion-fab>
+  <ion-fab bottom right [hidden]="!showAddBtn" class="addbtn">
+    <button ion-fab (tap)="goToAction()">
       <clr-icon shape="plus" size="24"></clr-icon>
     </button>
   </ion-fab>

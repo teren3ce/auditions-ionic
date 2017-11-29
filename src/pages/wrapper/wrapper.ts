@@ -4,6 +4,8 @@ import { LoginPage } from '../login/login';
 import { PopoverMenuComponent } from '../../components/popover-menu/popover-menu';
 import { NewAuditionPage } from '../new-audition/new-audition';
 import { ConversationPage } from '../conversation/conversation';
+import { ConversationGroupPage } from '../conversation-group/conversation-group';
+import { NewGroupPage } from '../new-group/new-group';
 
 @Component({
   selector: 'page-wrapper',
@@ -46,7 +48,7 @@ export class WrapperPage {
         class: 'message',
         index: 2,
       }]
-    this.currentTab = 2;
+    this.currentTab = 0;
 
     this.applications = [
       'Sample title for auditions',
@@ -85,20 +87,36 @@ export class WrapperPage {
     ]
 
     this.isTalent = this.navParams.get('type');
-    this.isTalent = true;
+
+    this.showAddBtn = false;
+  }
+
+  private _showAction() {
+    if (this.currentTab == 1) {
+      this.showAddBtn = true;
+      this.addBtnPage = NewAuditionPage;
+    }
+    else if (this.currentTab == 2 && this.selectMessageMenu == 'Groups') {
+      this.showAddBtn = true;
+      this.addBtnPage = NewGroupPage;
+    }
+    else {
+      this.showAddBtn = false;
+      this.addBtnPage = NewAuditionPage;
+    }
   }
 
   slideChanged() {
     this.currentTab = this.tabslide.getActiveIndex();
+    this._showAction();
   }
 
   segmentChanged() {
     this.tabslide.slideTo(this.currentTab);
+    this._showAction();
   }
   openLogin() {
     this.navCtrl.setRoot(LoginPage);
-  }
-  homeSlideChange(evt: Slides) {
   }
 
   openMessageMenu(evt) {
@@ -108,11 +126,22 @@ export class WrapperPage {
         selected: this.selectMessageMenu
       });
     popover.present({
-      ev: evt,
+      ev: evt
     });
     popover.onDidDismiss((data) => {
-      this.selectMessageMenu = data.selected;
-      this.selectMessageMenuIcon = data.icon;
+      if (data != null) {
+        this.selectMessageMenu = data.selected;
+        this.selectMessageMenuIcon = data.icon;
+
+        if (this.selectMessageMenu == "Groups") {
+          this.showAddBtn = true;
+          this.addBtnPage = NewGroupPage;
+        }
+        else {
+          this.showAddBtn = false;
+          this.addBtnPage = NewAuditionPage;
+        }
+      }
     })
   }
 
@@ -120,6 +149,16 @@ export class WrapperPage {
     this.navCtrl.push(ConversationPage, {
       message: item
     });
+  }
+
+  openGroup(item) {
+    this.navCtrl.push(ConversationGroupPage, {
+      message: item
+    });
+  }
+
+  goToAction() {
+    this.navCtrl.push(this.addBtnPage);
   }
 
   ngAfterViewInit() {
