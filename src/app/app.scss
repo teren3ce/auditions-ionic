@@ -316,12 +316,28 @@ button {
   box-shadow: 0 3px 18px rgba(0, 0, 0, .23) !important;
 }
 
+.icon-round {
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  background-color: #FF0392;
+  color: #fff;
+  text-align: center;
+  padding: 3px;
+  &.large {
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    padding: 10px;
+  }
+}
+
 
 /* App Title Header */
 
 .title-header {
   background-color: #212121;
-  padding: .5em 1.5em;
+  padding: .5em .8em;
   z-index: 100;
   position: relative;
   box-shadow: 0 4px 4px rgba(0, 0, 0, .23);

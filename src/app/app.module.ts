@@ -18,6 +18,7 @@ import { RegisterTermsPage } from '../pages/register-terms/register-terms';
 import { AccountProvider } from '../providers/account/account';
 import { ConfigProvider } from '../providers/config/config';
 import { ConversationPage } from '../pages/conversation/conversation';
+import { ConversationGroupPage } from '../pages/conversation-group/conversation-group';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ConversationPage } from '../pages/conversation/conversation';
     RegisterTermsPage,
     ForgotPasswordPage,
     WrapperPage,
-    ConversationPage
+    ConversationPage,
+    ConversationGroupPage
   ],
   imports: [
     BrowserModule,
@@ -47,7 +49,8 @@ import { ConversationPage } from '../pages/conversation/conversation';
     RegisterTermsPage,
     ForgotPasswordPage,
     WrapperPage,
-    ConversationPage
+    ConversationPage,
+    ConversationGroupPage
   ],
   providers: [
     StatusBar,

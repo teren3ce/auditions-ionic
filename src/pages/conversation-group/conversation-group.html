@@ -1,22 +1,30 @@
 <div class="title-header">
-    <div class="title-nav-bar">
-      <div>
-        <button ion-button clear icon-only (tap)="goBack()">
-          <clr-icon shape="arrow left" size="22"></clr-icon>
-        </button>
-        <avater [type]="'small'" [image]="'../../assets/imgs/pexels-photo-415829.jpeg'" [member]="{enable: false}" [status]="{enable: false }"></avater>
-        <ion-title>{{title}}Conversation Group</ion-title>
+  <div class="title-nav-bar">
+    <div>
+      <button ion-button clear icon-only (tap)="goBack()">
+        <clr-icon shape="arrow left" size="22"></clr-icon>
+      </button>
+      <div class="icon-round">
+        <clr-icon shape="users" size="15"></clr-icon>
       </div>
-      <ion-buttons>
-        <button ion-button clear icon-only>
-          <clr-icon shape="ellipsis-vertical" size="18"></clr-icon>
-        </button>
-      </ion-buttons>
+      <ion-title>{{title}}Models Needs for A big Show</ion-title>
     </div>
+    <ion-buttons>
+      <button ion-button clear icon-only>
+        <clr-icon shape="ellipsis-vertical" size="18"></clr-icon>
+      </button>
+    </ion-buttons>
   </div>
-  
-  
-  <ion-content padding>
-  
-  </ion-content>
-  
+</div>
+
+
+<ion-content padding>
+  <message-list *ngFor="let msgs of messages" [messages]="msgs.list" [option]="msgs.option"></message-list>
+
+  <div class="message-box">
+    <ion-input type="text" value="" placeholder="send a messages..."></ion-input>
+    <button ion-button clear>
+      <clr-icon shape="arrow right" size="20"></clr-icon>
+    </button>
+  </div>
+</ion-content>

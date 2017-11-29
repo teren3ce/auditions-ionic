@@ -11,7 +11,7 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { WrapperPage } from '../pages/wrapper/wrapper';
-import { ConversationPage } from '../pages/conversation/conversation';
+import { ConversationGroupPage } from '../pages/conversation-group/conversation-group';
 
 
 @Component({
@@ -20,7 +20,7 @@ import { ConversationPage } from '../pages/conversation/conversation';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = ConversationPage;
+  rootPage: any = ConversationGroupPage;
 
   pages: Array<{ title: string, component: any }>;
   helpPages: Array<{ title: string, url: string }>;
