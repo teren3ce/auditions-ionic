@@ -7,10 +7,10 @@ import { NavParams, ViewController } from 'ionic-angular';
 })
 export class PopoverFilterComponent {
 
-  text: string;
+  options: any;
 
   constructor(private navParams: NavParams, public viewCtrl: ViewController) {
-
+    this.navParams.data.options;
   }
 
   _selected(item) {

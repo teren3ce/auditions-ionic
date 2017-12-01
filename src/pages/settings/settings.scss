@@ -1,3 +1,29 @@
 page-settings {
-
+  .header {
+    background-color: $dark;
+    padding: 10px 0 0 0;
+    .toolbar {
+      .toolbar-background {
+        background-color: transparent;
+      }
+    }
+    ion-navbar.toolbar {
+      button {
+        color: $bg;
+        box-shadow: none;
+      }
+      .title {
+        width: calc(100% - 60px);
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 5px;
+        text-align: center;
+        .toolbar-title {
+          font-size: 1.3rem;
+          color: $bg;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { NotificationsPage } from '../notifications/notifications';
 
 @Component({
   selector: 'page-posted-auditions',
@@ -10,8 +11,8 @@ export class PostedAuditionsPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  goBack() {
-    this.navCtrl.pop();
+  openNotifications() {
+    this.navCtrl.push(NotificationsPage);
   }
 
   ionViewDidLoad() {

@@ -19,6 +19,18 @@ import { AccountProvider } from '../providers/account/account';
 import { ConfigProvider } from '../providers/config/config';
 import { ConversationPage } from '../pages/conversation/conversation';
 import { ConversationGroupPage } from '../pages/conversation-group/conversation-group';
+import { ApplicationsPage } from '../pages/applications/applications';
+import { AuditionDetailsPage } from '../pages/audition-details/audition-details';
+import { ImageSizingPage } from '../pages/image-sizing/image-sizing';
+import { EditProfilePage } from '../pages/edit-profile/edit-profile';
+import { NewAuditionPage } from '../pages/new-audition/new-audition';
+import { NewAuditionImagePage } from '../pages/new-audition-image/new-audition-image';
+import { NewGroupPage } from '../pages/new-group/new-group';
+import { NotificationsPage } from '../pages/notifications/notifications';
+import { PostedAuditionsPage } from '../pages/posted-auditions/posted-auditions';
+import { ProfilePage } from '../pages/profile/profile';
+import { SettingsPage } from '../pages/settings/settings';
+import { RegisterCategoryPage } from '../pages/register-category/register-category';
 
 @NgModule({
   declarations: [
@@ -27,11 +39,24 @@ import { ConversationGroupPage } from '../pages/conversation-group/conversation-
     LoginPage,
     RegisterPage,
     RegisterFormPage,
+    RegisterCategoryPage,
     RegisterTermsPage,
     ForgotPasswordPage,
     WrapperPage,
     ConversationPage,
-    ConversationGroupPage
+    ConversationGroupPage,
+    ApplicationsPage,
+    AuditionDetailsPage,
+    EditProfilePage,
+    ForgotPasswordPage,
+    ImageSizingPage,
+    NewAuditionPage,
+    NewAuditionImagePage,
+    NewGroupPage,
+    NotificationsPage,
+    PostedAuditionsPage,
+    ProfilePage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -46,11 +71,24 @@ import { ConversationGroupPage } from '../pages/conversation-group/conversation-
     LoginPage,
     RegisterPage,
     RegisterFormPage,
+    RegisterCategoryPage,
     RegisterTermsPage,
     ForgotPasswordPage,
     WrapperPage,
     ConversationPage,
-    ConversationGroupPage
+    ConversationGroupPage,
+    ApplicationsPage,
+    AuditionDetailsPage,
+    EditProfilePage,
+    ForgotPasswordPage,
+    ImageSizingPage,
+    NewAuditionPage,
+    NewAuditionImagePage,
+    NewGroupPage,
+    NotificationsPage,
+    PostedAuditionsPage,
+    ProfilePage,
+    SettingsPage
   ],
   providers: [
     StatusBar,

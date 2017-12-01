@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { NotificationsPage } from '../notifications/notifications';
 
 @Component({
   selector: 'page-applications',
@@ -8,6 +9,10 @@ import { NavController, NavParams } from 'ionic-angular';
 export class ApplicationsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  }
+
+  openNotifications() {
+    this.navCtrl.push(NotificationsPage);
   }
 
   ionViewDidLoad() {

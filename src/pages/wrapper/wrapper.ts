@@ -6,6 +6,7 @@ import { NewAuditionPage } from '../new-audition/new-audition';
 import { ConversationPage } from '../conversation/conversation';
 import { ConversationGroupPage } from '../conversation-group/conversation-group';
 import { NewGroupPage } from '../new-group/new-group';
+import { NotificationsPage } from '../notifications/notifications';
 
 @Component({
   selector: 'page-wrapper',
@@ -159,6 +160,10 @@ export class WrapperPage {
 
   goToAction() {
     this.navCtrl.push(this.addBtnPage);
+  }
+
+  openNotifications() {
+    this.navCtrl.push(NotificationsPage);
   }
 
   ngAfterViewInit() {
